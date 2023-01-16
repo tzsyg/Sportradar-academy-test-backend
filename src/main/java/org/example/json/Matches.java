@@ -129,13 +129,40 @@ public class Matches {
         }
         return string_comptetitors_List;
     }
+    public String map_highest_probability(){
+        double home_team_winner = probability_home_team_winner;
+        double draw = probability_draw;
+        double away_team_winner = probability_away_team_winner;
+        double largest;
+        largest = away_team_winner > (home_team_winner > probability_draw ? home_team_winner :
+                probability_draw) ? away_team_winner : ((home_team_winner > probability_draw) ? home_team_winner : probability_draw);
+
+        if(largest == home_team_winner){
+            TopTen.map.put("\n"+"Start date: " + start_date + "\n" +list_competitors_Print()+
+                    "\n" + venue + "Highest probable result :HOME_TEAM_WIN ",home_team_winner);
+
+            return "HOME_TEAM_WIN" + "("+home_team_winner+")";
+        }
+        else if(largest == draw){
+            TopTen.map.put("\n"+"Start date: " + start_date + "\n" +list_competitors_Print()+
+                    "\n" + venue + "Highest probable result :DRAW ",draw);
+
+            return "DRAW" + "("+draw+")";
+        }
+        else{
+            TopTen.map.put("\n"+"Start date: " + start_date + "\n" +list_competitors_Print()+
+                    "\n" + venue + "Highest probable result :AWAY_TEAM_WIN ",away_team_winner);
+
+            return "AWAY_TEAM_WIN" + "("+away_team_winner+")";
+        }
+    }
 
 
     @Override
     public String toString() {
         return
                 "Start date: " + start_date + "\n" +list_competitors_Print()+
-                        "\n" + venue + "Highest probable result :"+ "\n"+"\n";
+                        "\n" + venue + "Highest probable result :"+map_highest_probability()+ "\n"+"\n";
     }
 
 
