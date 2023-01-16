@@ -77,8 +77,15 @@ public class Competitors {
         this.gender = gender;
     }
 
+    //Method for adding team names alphabetically
+    public String alphabetically(){
+        Alphabetically.alphabetically.add(name);
+        return "";
+    }
+
     @Override
     public String toString() {
-        return  name + "(" + country+")";
+        return  name + "(" + country+")" + alphabetically();
     }
+
 }
