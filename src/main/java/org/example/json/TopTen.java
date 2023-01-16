@@ -18,7 +18,7 @@ public class TopTen {
     //The top 10 probability
     public void top_amount(){
         Iterator<Map.Entry<String, Double>> iterator = sorted_desceding().entrySet().iterator();
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             Map.Entry<String, Double> entry = iterator.next();
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
