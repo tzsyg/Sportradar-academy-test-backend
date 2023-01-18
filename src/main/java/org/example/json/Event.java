@@ -1,6 +1,8 @@
 package org.example.json;
 import java.util.ArrayList;
 
+//Class for mapping the Event list.
+
 public class Event {
     ArrayList<Matches> Events;
 

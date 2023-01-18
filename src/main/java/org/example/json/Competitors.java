@@ -1,5 +1,6 @@
 package org.example.json;
 
+//Class for mapping the Competitors list, with method that adds competitors to HashSet.
 public class Competitors {
     private String id;
     private String name;

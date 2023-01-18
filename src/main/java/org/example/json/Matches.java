@@ -2,6 +2,8 @@ package org.example.json;
 
 import java.util.List;
 
+//Class for mapping the Matches.
+
 public class Matches {
     private String sport_event_id;
     private String start_date;
@@ -116,6 +118,8 @@ public class Matches {
     public void setProbability_away_team_winner(double probability_away_team_winner) {
         this.probability_away_team_winner = probability_away_team_winner;
     }
+
+    //Method for printing the competitors list the proper way.
     public String list_competitors_Print(){
         String string_comptetitors_List ="";
         int counter=0;
@@ -129,6 +133,7 @@ public class Matches {
         }
         return string_comptetitors_List;
     }
+    //Method for finding the highest probability result of the match and also for mapping the resoult to the TopTen map.
     public String map_highest_probability(){
         double home_team_winner = probability_home_team_winner;
         double draw = probability_draw;

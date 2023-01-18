@@ -1,5 +1,7 @@
 package org.example.json;
 
+//Class for mapping the Venue list,
+
 public class Venue {
     private String id;
     private String name;

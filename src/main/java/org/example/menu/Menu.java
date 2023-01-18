@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import static org.example.exception.Exception.checkRange;
 
-
+//Menu class for easier usage of the program.
 public class Menu {
     private int choice;
     private int amount;

@@ -3,6 +3,8 @@ package org.example.json;
 
 import java.util.*;
 
+//Class for sorting Competitors alphabetically. TreeSet is used to store unique names.
+
 public class Alphabetically {
     public static HashSet<String> alphabetically = new HashSet<String>();
 

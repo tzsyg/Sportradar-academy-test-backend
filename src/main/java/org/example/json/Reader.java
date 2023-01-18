@@ -11,7 +11,7 @@ public class Reader {
     private Gson gson;
     private JsonReader eventsCapture;
 
-
+//Class for reading Json.
 
     public Reader(Gson gson) {
         this.gson = gson;
